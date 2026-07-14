@@ -1,0 +1,10 @@
+FROM lcr.loongnix.cn/library/rust:1.97.0-forky-slim
+
+RUN apt-get update && apt-get install -y \
+    ca-certificates \
+    build-essential \
+    cmake \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+CMD ["/bin/bash"]
